@@ -21,22 +21,267 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-
-}
-
-
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+body { 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-footer {
-
-}
+header { 
+  text-align: center;
+  background-color: #E61E2A;
+  color: white;
+  width: 100%;
+} 
 
 /******************************************
-/* ADDITIONAL STYLES
+/* BUTTONS
 /*******************************************/
+.sourceButton {
+  color: black;
+  border: black 3px solid;
+  border-radius: 20px;
+  padding: 0.5% 1%;
+}
+
+.largeButton {
+  color: black;
+  border: black 4px solid;
+  border-radius: 20px;
+  padding: 1% 2%;
+}
+
+.highlightButton {
+  color: white;
+  background-color: #E61E2A;
+}
+/****************************************
+SOURCE SELECTOR STYLES
+****************************************/
+#sourceSelection h2 {
+  font-size: 2rem;
+}
+
+#sourceSelection {
+  width: 100%;
+  text-align: center;
+}
+#sourceList { 
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+}
+
+#sourceList * {
+  list-style: none;
+  margin: 0% 1%;
+  width: 10%;
+  font-weight: 900;
+}
+
+/**************************************
+PRIMARY INFO STYLES
+**************************************/
+
+#primaryInfo { 
+ width: 100%;
+ margin-top: 2%
+}
+
+#sourceTitleForm {
+  display: flex;
+  width: 100%;
+  margin-left: 340px;
+}
+
+#sourceTitleInput {
+  width: 500px;
+  margin-left: 0.5%;
+}
+
+#contributorForm {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#contributorForm ul { 
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+#contributorForm li {
+  margin-left: 0.5%;
+  list-style: none;
+  text-align: left;
+}
+
+#positionInput { 
+  width: 200px;
+}
+
+#firstnameInput {
+  width: 200px;
+}
+
+#middleInput { 
+  width: 80px;
+}
+
+#lastnameInput { 
+  width: 200px;
+}
+
+#suffixInput { 
+  width: 50px;
+}
+
+#contributorAddButton { 
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: -0.6%;
+  margin-left: 430px;
+}
+
+#contributorAddButton img {
+height: 23px;
+}
+
+#contributorAddButton span {
+margin-left: 0.3%;
+color: blue;
+font-size: 0.8rem;
+}
+
+/*************************
+WEBSITE SOURCE INFO STYLES
+*************************/
+.websiteSourceInfo { 
+  margin-top: 0%;
+  width: 100%;
+}
+
+.websiteSourceInfo form { 
+  display: flex;
+  flex-flow: column;
+  margin-left: 325px;
+}
+
+.websiteSourceInfo input { 
+  width: 500px;
+}
+
+.websiteSourceInfo div { 
+  margin-top: 0.5%;
+}
+
+#websitePublisherInputDiv { 
+  margin-left: 38px;
+}
+
+#websiteURLInputDiv {
+  margin-left: 77px;
+}
+
+/*************************
+CITATION BUTTON STYLES
+*************************/
+#citationMenu { 
+  margin-top: 3%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#citationMenu img { 
+  height: 30px;
+  width: 30px;
+}
+
+#citationMenu * { 
+  margin-top: 3%;
+}
+
+#scrollMessage { 
+  margin-top: 8%;
+}
+
+#citationMenu .largeButton {
+  padding: 10px 30px;
+  width: 200px;
+  text-align: center;
+  font-weight: 900;
+}
+
+/*************************
+BIBLIOGRAPHY STYLES
+*************************/
+#referenceList * {
+  word-wrap: break-word;
+  width: 700px;
+}
+
+#bibliography h2 { 
+  text-align: center;
+  font-size: 2rem;
+}
+
+#bibliography li { 
+  font-family: serif;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+#referenceList img {
+  height: 15px;
+  width: 15px;
+  margin-left: 1%;
+}
+
+/*************************
+BIBLIOGRAPHY BUTTONS
+*************************/
+#bibliographyButtons { 
+  display: flex;
+  flex-flow: column;
+  margin-top: 3%;
+}
+
+#bibliographyButtons span { 
+  padding: 10px 30px;
+  width: 200px;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 2%;
+}
+
+#clearBibliographyButton { 
+  margin-top: 4%;
+}
+
+/************************
+FOOTER STYLES
+*************************/
+footer { 
+  margin-top: 2%;
+  font-size: 0.75rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+footer span {
+  margin-bottom: 15px;
+  color: darkblue;
+  text-decoration: underline;
+}

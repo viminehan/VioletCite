@@ -11,8 +11,116 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+	
+		<!-- Import Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+
 	</head>
 	<body>
+		<header>
+			<h1> VioletCite </h1>
+		</header>
+		
+		<!-- Source Selection-->
+		<div id="sourceSelection">
+			<h2> Choose your source </h2>
+			<ul id="sourceList">
+				<li class="sourceButton" id="websiteButton"> Website </li>
+				<li class="sourceButton" id="newspaperButton"> Newspaper </li>
+				<li class="sourceButton" id="journalButton"> Journal </li>
+				<li class="sourceButton" id="moreButton"> More </li>
+			</ul>
+		</div>
+
+		<!-- Primary Information for all source types-->
+		<div id="primaryInfo">
+			<form id="sourceTitleForm">
+				<label for="sourceTitleInput"> Source Title </label>
+				<input type="text" name="sourceTitleInput" id="sourceTitleInput">
+			</form>
+			<form id="contributorForm"> 
+				<ul>
+					<li> <label for="contributorInput"> Contributor </label> </li>
+					<li> <input type="text" name="contributorForm" id="positionInput" placeholder="Position"> </li>
+					<li> <input type="text" id="firstnameInput" placeholder="First Name"> </li>
+					<li> <input type="text" id="middleInput" placeholder="Middle"> </li>
+					<li> <input type="text" id="lastnameInput" placeholder="Last Name"> </li>
+					<li> <input type="text" id="suffixInput" placeholder="Suffix"> </li>
+					<li> <img src="../assets/trash-2.svg" alt="Delete Contributor"> 
+				</ul>
+			</form>
+			<div id="contributorAddButton"> 
+				<img src="../assets/plus-circle.svg" alt="Add Contributor">
+				<span> Add a Contributor </span>
+			</div>
+		</div>
+		
+		<hr> <!-- Horizontal Rule -->
+
+		<!-- Source specific info: WEBSITE-->
+		<div class="websiteSourceInfo">
+			<form>		
+				<div id="websitePublisherInputDiv">
+					<label for="websitePublisherInput"> Publisher </label>
+					<input type="text" name="websitePublisherInput" id="websitePublisherInput">
+				</div>
+				<div id="websiteURLInputDiv">
+					<label for="websiteURLInput"> URL </label>
+					<input type="text" name="websiteURLInput" id="websiteURLInput">
+				</div>
+				<div id="websiteDateInputDiv"> 
+					<label for="websiteDatePublishedInput"> Date Published </label>
+					<input type="date" name="websiteDatePublishedInput" id="websiteDatePublishedInput">
+				</div>
+				<div id="websiteDateAccessedInputDiv">
+					<label for="websiteDateAccessedInput"> Date Accessed </label>
+					<input type="date" name="webiteDateAccessedInput" id="websiteDateAccessedInput">
+				</div>
+			</form>
+		</div>
+
+		<!-- Citation Menu -->
+		<div id="citationMenu">
+			<span class="largeButton highlightButton" id="completeCitationButton"> Complete Citation </span>
+			<span class="largeButton" id="clearCitationButton"> Clear Citation </span>
+			<span id="scrollMessage"> Scroll to see your bibliography </span>
+			<img src="../assets/arrow-down.svg" alt="Arrow Down">
+		</div>
+		
+		<hr> <!-- Horiztonal Rule -->
+
+		<div id="bibliography">
+			<h2> Bibliography </h2>
+			<ol id="referenceList">
+				<!-- References S--> 
+				<li> 
+					<span> ExampleItemAAAAAAAAAAAAAAAAAAAAAAAAAAAA <span>
+					<img src="../assets/trash-2.svg">
+				</li>
+
+				<li> 
+					<span> ExampleItemBBBBBBBB </span>
+					<img src="../assets/trash-2.svg"> 
+				</li>
+
+				<li> 
+					<span> ExampleItemCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC </span>
+					<img src="../assets/trash-2.svg">
+				 </li>
+			</ol>
+		</div>
+
+		<div id="bibliographyButtons"> 
+			<span class="largeButton highlightButton" id="exportPDFButton"> Export as .PDF </span>
+			<span class="largeButton highlightButton" id="exportDOCXButton"> Export as .Docx </span>
+			<span  class="largeButton" id="clearBibliographyButton"> Clear Bibliography </span>
+		</div>
+
+		<footer>
+				<span id="authorTag"> Created by Violet Minehan </span>
+		</footer>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
