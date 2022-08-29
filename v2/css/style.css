@@ -18,25 +18,186 @@
 }
 
 /******************************************
-/* BASE STYLES
+/* STRUCTURAL
 /*******************************************/
-
-body {
-
+body { 
+  display: flex;
+  flex-flow: column;
+  font-family: 'Roboto', sans-serif;
 }
 
+header { 
+  text-align: center;
+  background-color: #E61E2A;
+  color: white;
+  width: 100%;
+} 
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
+/***************************
+MODULAR STYLES
+**************************/
+.longTxt { 
+  width: 50%;
 }
 
-footer {
-
+.shortTxt { 
+  width: 8%;
 }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+/* .icon { 
+   height: 20px;
+  width: 20px; 
+} */
+
+.leftMargin { 
+  margin-left: 5%;
+}
+
+/***************************
+BUTTONS
+***************************/
+#contributorAddButton { 
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 0.3%;
+  margin-left: 0.3%;
+}
+
+.bigButton {
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 0.5%;
+    margin-left: 0.5%;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.highlightButton { 
+  color: white;
+  background-color: #E61E2A;
+}
+/****************************
+CHOOSE YOUR SOURCE
+****************************/
+#chooseYourSource h2 { 
+  font-size: 2rem;
+}
+
+#sourceSelector { 
+  display: flex;
+  
+}
+
+/********************
+CORE INFO 
+********************/
+#coreInfo { 
+  margin-top: 1%;
+}
+
+#coreInfo form { 
+  display: flex;
+  flex-flow: column;
+}
+
+#contributorLabel { 
+  margin-top: 0.5%;
+}
+
+#contributorList { 
+  display: flex;
+  flex-flow: row;
+}
+
+#contributorList * {
+  margin-left: 0.3%;
+}
+
+/* Contributor Input Customization */
+#positionInput { 
+  width: 10%;
+}
+
+#firstnameInput { 
+  width: 10%;
+}
+
+#middleInput  {
+  width: 5%;
+}
+
+#lastnameInput { 
+  width: 10%;
+}
+
+#suffixInput { 
+  width: 3%;
+}
+
+#contributorAddButton span { 
+  margin-left: 0.2%;
+}
+
+/**********************
+CONTEXT SOURCE STYLE
+*******************/
+.contextSource { 
+  margin-top: 1%;
+}
+
+.contextSource form { 
+  display: flex;
+  flex-flow: column;
+}
+
+.contextSource form label { 
+  margin-top: 0.3%;
+}
+
+/******************
+CITATION MENU
+*****************/
+#citationMenu {
+  margin-top: 1.5%;
+  display: flex;
+  flex-flow: column;
+}
+
+#citationMenu .bigButton { 
+  width: 8%;
+}
+
+#scrollMessageDiv { 
+  margin-top: 1.5%;
+  display: flex;
+  flex-flow: row;
+  align-items: centers;
+}
+
+/********************
+BIBLIOGRAPHY 
+*******************/
+#bibliography h2{ 
+ font-size: 2rem;
+}
+
+#bibliography li {
+  margin-top: 0.5%;
+}
+/***********************
+BIBLIOGRAPHY MENU
+***********************/
+#bibliographyButtons { 
+  margin-top: 1.5%;
+}
+
+/***************
+FOOTER
+**************/
+footer { 
+  margin-top: 2%;
+  color: darkblue;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
