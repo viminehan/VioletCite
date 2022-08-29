@@ -240,6 +240,7 @@ BIBLIOGRAPHY STYLES
   display: flex;
   flex-flow: row;
   align-items: center;
+  margin-top: 10px;
 }
 
 #referenceList img {
