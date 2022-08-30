@@ -28,7 +28,7 @@
 			<h2> Choose Your Source </h2>
 			<div id="sourceSelector">
 				<div class="bigButton highlightButton" id="selectWebsite"> Website </div>
-				<div class="bigButton" id="selectNewsPaper"> Newspaper </div>
+				<div class="bigButton" id="selectNewspaper"> Web Newspaper </div>
 				<div class="bigButton" id="selectJournal"> Journal </div>
 				<div class="bigButton" id="selectGovernmentReport"> Government Report </div>
 				<div class="bigButton" id="selectCompanyReport"> Company Report </div>
@@ -37,7 +37,7 @@
 
 		<!-- Core Info -->
 		<div class="leftMargin" id="coreInfo">
-			<form>
+			<form id="coreForm">
 				<label for="sourceTitle"> Source Title: </label>
 				<input type="text" name="sourceTitleInput" class="longTxt" placeholder="">
 				<label for="contributorInput" id="contributorLabel"> Contributor: </label>
@@ -58,23 +58,101 @@
 
 		<!-- Website Source Info -->
 		<div class="websiteSourceInfo contextSource leftMargin">
-			<form>		
+			<form id="websiteForm">	
+					<label for="websiteNameInput"> Website Name </label>
+					<input type="txt" name="websiteNameInput" class="longTxt" id="websiteNameInput">
 
 					<label for="websitePublisherInput"> Publisher </label>
 					<input type="text" name="websitePublisherInput" class="longTxt" id="websitePublisherInput">
-
 		
 					<label for="websiteURLInput"> URL </label>
 					<input type="text" name="websiteURLInput" class="longTxt" id="websiteURLInput">
-
 	
-					<label for="websiteDatePublishedInput"> Date Published </label>
-					<input type="date" name="websiteDatePublishedInput" class="shortTxt" id="websiteDatePublishedInput">
-
+					<label for="websiteYearPublishedInput"> Year Published </label>
+					<input type="text" name="websiteYearPublishedInput" class="shortTxt" id="websiteYearPublishedInput">
 
 					<label for="websiteDateAccessedInput"> Date Accessed </label>
 					<input type="date" name="webiteDateAccessedInput" class="shortTxt" id="websiteDateAccessedInput">
+			</form>
+		</div>
 
+		<!-- Newspaper Source Info -->
+		<div class="newspaperSourceInfo contextSource leftMargin">
+			<form id="newspaperForm">
+				<label for="NewspaperNameInput"> Newspaper Name </label>
+				<input type="text" name="newspaperNameInput" class="longTxt" id="newspaperNameInput">
+
+				<label for="newspaperURLInput"> Newspaper URL </label>
+				<input type="text" name="newspaperURLInput" class="longTxt" id="newspaperURLInput">
+
+				<label for="newspaperDatePublishedInput"> Date Published </label>
+				<input type="date" name="newspaperDatePublishedInput" class="shortTxt" id="newspaperDatePublishedInput">
+
+				<label for="newspaperDateAccessedInput"> Date Accessed </label>
+				<input type="date" name="newspaperDateAccessedInput" class="shortTxt" id="newspaperAccessedInput">
+			</form>
+		</div>	
+
+		<!-- Journal Source Info -->
+		<div class="journalSourceInfo contextSource leftMargin"> 
+			<form id="journalForm">
+				<label for="journalNameInput"> Journal Name </label>
+				<input type="text" name="journalNameInput" class="longTxt" id="journalNameInput">
+
+				<label for="journalVolumeIssue"> Volume(Issue) </label>
+				<input type="text" name="journalVolumeIssue" class="shortTxt" id="journalVolumeIssue">
+
+				<label for="journalStartEndPageInput"> Start Page - End Page </label>
+				<input type="text" name="journalStartEndPageInput" class="shortTxt" id="journalStartEndPageInput">
+
+				<label for="journalDOIInput"> DOI Number </label>
+				<input type="text" name="journalDOIInput" class="shortTxt" id="journalDOIInput">
+
+				<label for="journalYearPublished"> Year Published </label>
+				<input type="text" name="journalYearPublished" class="shortTxt" id="journalYearPublished">
+			</form>
+		</div>
+
+		<!-- Government Report Source Info -->
+		<div class="governmentReportSourceInfo contextSource leftMargin">
+			<form id="governmentReportForm">
+				<label for="governmentReportAgencyNameInput"> Name of Government Agency </label>
+				<input type="text" name="governmentReportAgencyNameInput" class="longTxt" id="governmentReportAgencyNameInput">
+
+				<label for="governmentReportGovernmentName"> Government Name </label>
+				<input type="text" name="governmentReportGovernmentName" class="longTxt" id="governmentReportGovernmentName">
+
+				<label for="governmentReportURL"> URL </label>
+				<input type="text" name="governmentReportURL" class="longTxt" id="governmentReportURL">
+
+				<label for="governmentReportNumber"> Report Number </label>
+				<input type="text" name="governmentReportNumber" class="shortTxt" id="governmentReportNumber">
+
+				<label for="governmentReportYearPublished"> Year Published </label>
+				<input type="text" name="governmentReportYearPublished" class="shortTxt" id="governmentReportYearPublished">
+
+				<label for="governmentReportDateAccessed"> Date Accessed </label>
+				<input type="date" name="governmentReportDateAccessed" class="shortTxt" id="governmentReportDateAccessed">
+			</form>
+		</div>
+
+		<!-- Company Report Source Info -->
+		<div class="companyReportSourceInfo contextSource leftMargin">
+			<form id="companyReportForm">
+				<label for="companyReportWebsite"> Name of Website </label>
+				<input type="text" name="companyReportWebsite" class="longTxt" id="companyReportWebsite">
+
+				<label for="companyReportURL"> URL </label>
+				<input type="text" name="companyReportURL" class="longTxt" id="companyReport">
+
+				<label for="companyReportNumber"> Report Number </label>
+				<input type="text" name="companyReportNumber" class="shortTxt" id="companyReportNumber">
+				
+				<label for="companyReportYearPublished"> Year Published </label>
+				<input type="text" name="companyReportYearPublished" class="shortTxt" id="companyReportYearPublished">
+
+				<label for="companyReportDateAccessed"> Date Accessed </label>
+				<input type="date" name="companyReportDateAccessed" class="shortTxt" id="companyReportDateAccessed">
 			</form>
 		</div>
 

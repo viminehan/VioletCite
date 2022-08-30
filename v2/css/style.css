@@ -89,6 +89,21 @@ CHOOSE YOUR SOURCE
   
 }
 
+.newspaperSourceInfo { 
+  display: none;
+}
+
+.journalSourceInfo {
+  display: none;
+}
+
+.governmentReportSourceInfo {
+  display: none;
+}
+
+.companyReportSourceInfo { 
+  display: none;
+}
 /********************
 CORE INFO 
 ********************/
