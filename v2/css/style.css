@@ -120,40 +120,44 @@ CORE INFO
   margin-top: 0.5%;
 }
 
-#contributorList { 
+.contributorList { 
   display: flex;
   flex-flow: row;
 }
 
-#contributorList * {
+.contributorList * {
   margin-left: 0.3%;
 }
 
 /* Contributor Input Customization */
-#positionInput { 
+.positionInput { 
   width: 10%;
 }
 
-#firstnameInput { 
+.firstnameInput { 
   width: 10%;
 }
 
-#middleInput  {
+.middleInput  {
   width: 5%;
 }
 
-#lastnameInput { 
+.lastnameInput { 
   width: 10%;
 }
 
-#suffixInput { 
-  width: 3%;
+.suffixInput { 
+  width: 4%;
 }
 
 #contributorAddButton span { 
   margin-left: 0.2%;
 }
 
+.secondaryContributor { 
+  margin-top: 0.5%;
+  display: none;
+}
 /**********************
 CONTEXT SOURCE STYLE
 *******************/
