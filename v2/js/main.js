@@ -332,3 +332,167 @@ function resetCitationBoxes() {
    console.log("Current Contributors: " + currentContributors);
 }
 
+/*
+function retriveCoreData()  {
+sourceTitle = document.querySelector('#sourceTitle').value;
+}
+
+function retriveContextData() { 
+if (sourceSelected == "website") { 
+   retrieveWebsiteData();
+} else if (sourceSelected == "newspaper") { 
+   retrieveNewspaperData();
+} else if (sourceSelected == "journal") { 
+   retrieveJournalData();
+} else if (sourceSelected == "governmenteport") { 
+   retrieveGovernmentReportData();
+} else if (sourceSelected == "companyReport") { 
+   retrieveCompanyReportData();
+};
+}
+
+
+function dataConsolelog() { 
+console.log("Source Title: " + sourceTitle)
+};
+*/
+
+//Complete Citation Click
+function completeCitation() { 
+   doCitation();
+   printStuff();
+}
+
+//Data Declarations
+let citation = [];
+let contributor = [];
+
+let l1 = "";
+let m1 = "";
+let n1 = "";
+
+let l2 = "";
+let m2 = "";
+let n2 = "";
+
+let l3 = "";
+let m3 = "";
+let n3 = "";
+
+let l4 = "";
+let m4 = "";
+let n4 = "";
+
+let l5 = "";
+let m5 = "";
+let n5 = "";
+
+let l6 = "";
+let m6 = "";
+let n6 = "";
+
+let l7 = "";
+let m7 = "";
+let n7 = "";
+
+let l8 = "";
+let m8 = "";
+let n8 = "";
+
+function doCitation() { 
+   l1 = document.querySelector('#l1').value
+   m1 = document.querySelector('#m1').value
+   n1 = document.querySelector('#n1').value
+
+   l2 = document.querySelector('#l2').value
+   m2 = document.querySelector('#m2').value
+   n2 = document.querySelector('#n2').value
+
+   l3 = document.querySelector('#l3').value
+   m3 = document.querySelector('#m3').value
+   n3 = document.querySelector('#n3').value
+
+   l4 = document.querySelector('#l4').value
+   m4 = document.querySelector('#m4').value
+   n4 = document.querySelector('#n4').value
+
+   l5 = document.querySelector('#l5').value
+   m5 = document.querySelector('#m5').value
+   n5 = document.querySelector('#n5').value
+
+   l6 = document.querySelector('#l6').value
+   m6 = document.querySelector('#m6').value
+   n6 = document.querySelector('#n6').value
+
+   l7 = document.querySelector('#l7').value
+   m7 = document.querySelector('#m7').value
+   n7 = document.querySelector('#n7').value
+
+   l8 = document.querySelector('#l8').value
+   m8 = document.querySelector('#m8').value
+   n8 = document.querySelector('#n8').value
+
+   //Needs to be re-written to be arrays
+   if (l1 !== "") { 
+      contributor[0] = `${l1} ${m1.substring(0,1)} ${n1.substring(0,1)}`;
+      currentContributors = 1;
+   }
+
+   if (l2 !== "") { 
+      contributor[1] = `${l2} ${m2.substring(0,1)} ${n2.substring(0,1)}`;
+      currentContributors = 2;
+   }
+
+   if (l3 !== "") { 
+      contributor[2] = `${l3} ${m3.substring(0,1)} ${n3.substring(0,1)}`;
+      currentContributors = 3;
+   }
+
+   if (l4 !== "") { 
+      contributor[3] = `${l4} ${m4.substring(0,1)} ${n4.substring(0,1)}`;
+      currentContributors = 4;
+   }
+
+   if (l5 !== "") { 
+      contributor[4] = `${l5} ${m5.substring(0,1)} ${n5.substring(0,1)}`;
+      currentContributors = 5;
+   }
+
+   if (l6 !== "") { 
+      contributor[5] = `${l6} ${m6.substring(0,1)} ${n6.substring(0,1)}`;
+      currentContributors = 6;
+   }
+
+   if (l7 !== "") { 
+      contributor[6] = `${l7} ${m7.substring(0,1)} ${n7.substring(0,1)}`;
+      currentContributors = 7;
+   }
+
+   if (l8 !== "") { 
+      contributor[7] = l8 + m8.substring(0,1) + n8.substring(0,1);
+      currentContributors = 8;
+   }
+
+   if (currentContributors == 1) {
+      citation[0] = `${contributor[0]}`;
+   } else if (currentContributors == 2) { 
+      citation[0] = `${contributor[0]} & ${contributor[1]}`;
+   } else if (currentContributors == 3) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]} & ${contributor[2]}`;
+   } else if (currentContributors == 4) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]} & ${contributor[3]}`;
+   } else if (currentContributors == 5) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]} & ${contributor[4]}`;
+   } else if (currentContributors == 6) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]} & ${contributor[5]}`;
+   } else if (currentContributors == 7) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]} & ${contributor[6]}`;
+   } else if (currentContributors == 8) { 
+      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]}, ${contributor[6]} & ${contributor[7]}`;
+   }
+}
+
+function printStuff() {
+console.log(citation)
+}
+
