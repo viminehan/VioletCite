@@ -359,13 +359,20 @@ console.log("Source Title: " + sourceTitle)
 
 //Complete Citation Click
 function completeCitation() { 
-   doCitation();
-   printStuff();
+   citeContributors();
+   citeYearPublished();
+   logCitation();
 }
 
-//Data Declarations
+function logCitation() {
+   console.log(citation)
+};
+   
+//General Data Declarations
 let citation = [];
 let contributor = [];
+
+//Contributor Data Declrations
 
 let l1 = "";
 let m1 = "";
@@ -399,7 +406,11 @@ let l8 = "";
 let m8 = "";
 let n8 = "";
 
-function doCitation() { 
+//Website Data Declarations
+let websiteYearPublished = "";
+
+
+function citeContributors() { 
    l1 = document.querySelector('#l1').value
    m1 = document.querySelector('#m1').value
    n1 = document.querySelector('#n1').value
@@ -492,7 +503,8 @@ function doCitation() {
    }
 }
 
-function printStuff() {
-console.log(citation)
-}
 
+function citeYearPublished() { 
+   websiteYearPublished = document.querySelector('#websiteYearPublishedInput').value
+   citation[1] = `(${websiteYearPublished})`;
+}
