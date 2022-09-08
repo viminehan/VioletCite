@@ -1,3 +1,7 @@
+
+//README: Yes I know my code is a hard-coded total mess. I'm workshopping this as I'm going and
+// Ill come back to do this properly and programmatically in V2. Thank you!
+
 /***********************
  GLOBAL DECLARATIONS
  ************************/
