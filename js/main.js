@@ -332,47 +332,30 @@ function resetCitationBoxes() {
    console.log("Current Contributors: " + currentContributors);
 }
 
-/*
-function retriveCoreData()  {
-sourceTitle = document.querySelector('#sourceTitle').value;
-}
-
-function retriveContextData() { 
-if (sourceSelected == "website") { 
-   retrieveWebsiteData();
-} else if (sourceSelected == "newspaper") { 
-   retrieveNewspaperData();
-} else if (sourceSelected == "journal") { 
-   retrieveJournalData();
-} else if (sourceSelected == "governmenteport") { 
-   retrieveGovernmentReportData();
-} else if (sourceSelected == "companyReport") { 
-   retrieveCompanyReportData();
-};
-}
-
-
-function dataConsolelog() { 
-console.log("Source Title: " + sourceTitle)
-};
-*/
-
 //Complete Citation Click
 function completeCitation() { 
    citeContributors();
    citeYearPublished();
-   logCitation();
+   citeSourceTitle();
+   logWebsiteCitation();
+   // clearCitation();
 }
 
-function logCitation() {
-   console.log(citation)
+function logWebsiteCitation() {
+   citation = `${allContributors} ${websiteYearPublished ? `(${websiteYearPublished})` : `` } ${sourceTitle}`;
+   // document.querySelector('#testEntry').innerHTML = citation;
+   document.querySelector('.cName').innerHTML = allContributors;
+   document.querySelector('.cDatePublished').innerHTML = "(" + websiteYearPublished + ")";
+   document.querySelector('.cTitle').innerHTML = sourceTitle;
 };
-   
-//General Data Declarations
-let citation = [];
-let contributor = [];
 
-//Contributor Data Declrations
+//General Data Declarations
+let citation = "Citation Error.";
+let sourceTitle = "";
+
+//Contributor Data Declarations
+let contributor = [];
+let allContributors;
 
 let l1 = "";
 let m1 = "";
@@ -443,68 +426,75 @@ function citeContributors() {
    m8 = document.querySelector('#m8').value
    n8 = document.querySelector('#n8').value
 
-   //Needs to be re-written to be arrays
    if (l1 !== "") { 
-      contributor[0] = `${l1} ${m1.substring(0,1)} ${n1.substring(0,1)}`;
+      contributor[0] = `${l1}${m1.substring(0,1) ? ` ${m1.substring(0,1)}` : ``}${n1.substring(0,1) ? ` ${n1.substring(0,1)}` : ``}`;
       currentContributors = 1;
    }
 
    if (l2 !== "") { 
-      contributor[1] = `${l2} ${m2.substring(0,1)} ${n2.substring(0,1)}`;
+      contributor[1] = `${l2}${m2.substring(0,1) ? ` ${m2.substring(0,1)}` : ``}${n2.substring(0,1) ? ` ${n2.substring(0,1)}` : ``}`;
       currentContributors = 2;
    }
 
    if (l3 !== "") { 
-      contributor[2] = `${l3} ${m3.substring(0,1)} ${n3.substring(0,1)}`;
+      contributor[2] = `${l3}${m3.substring(0,1) ? ` ${m3.substring(0,1)}` : ``}${n3.substring(0,1) ? ` ${n3.substring(0,1)}` : ``}`;
       currentContributors = 3;
    }
 
    if (l4 !== "") { 
-      contributor[3] = `${l4} ${m4.substring(0,1)} ${n4.substring(0,1)}`;
+      contributor[3] = `${l4}${m4.substring(0,1) ? ` ${m4.substring(0,1)}` : ``}${n4.substring(0,1) ? ` ${n4.substring(0,1)}` : ``}`;
       currentContributors = 4;
    }
 
    if (l5 !== "") { 
-      contributor[4] = `${l5} ${m5.substring(0,1)} ${n5.substring(0,1)}`;
+      contributor[4] = `${l5}${m5.substring(0,1) ? ` ${m5.substring(0,1)}` : ``}${n5.substring(0,1) ? ` ${n5.substring(0,1)}` : ``}`;
       currentContributors = 5;
    }
 
    if (l6 !== "") { 
-      contributor[5] = `${l6} ${m6.substring(0,1)} ${n6.substring(0,1)}`;
+      contributor[5] = `${l6}${m6.substring(0,1) ? ` ${m6.substring(0,1)}` : ``}${n6.substring(0,1) ? ` ${n6.substring(0,1)}` : ``}`;
       currentContributors = 6;
    }
 
    if (l7 !== "") { 
-      contributor[6] = `${l7} ${m7.substring(0,1)} ${n7.substring(0,1)}`;
+      contributor[6] = `${l7}${m7.substring(0,1) ? ` ${m7.substring(0,1)}` : ``}${n7.substring(0,1) ? ` ${n7.substring(0,1)}` : ``}`;
       currentContributors = 7;
    }
 
    if (l8 !== "") { 
-      contributor[7] = l8 + m8.substring(0,1) + n8.substring(0,1);
+      contributor[7] = `${l8}${m8.substring(0,1) ? ` ${m8.substring(0,1)}` : ``}${n8.substring(0,1) ? ` ${n8.substring(0,1)}` : ``}`;
       currentContributors = 8;
    }
 
    if (currentContributors == 1) {
-      citation[0] = `${contributor[0]}`;
+      allContributors = `${contributor[0]}`;
    } else if (currentContributors == 2) { 
-      citation[0] = `${contributor[0]} & ${contributor[1]}`;
+      allContributors = `${contributor[0]} & ${contributor[1]}`;
    } else if (currentContributors == 3) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]} & ${contributor[2]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]} & ${contributor[2]}`;
    } else if (currentContributors == 4) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]} & ${contributor[3]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]}, ${contributor[2]} & ${contributor[3]}`;
    } else if (currentContributors == 5) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]} & ${contributor[4]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]} & ${contributor[4]}`;
    } else if (currentContributors == 6) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]} & ${contributor[5]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]} & ${contributor[5]}`;
    } else if (currentContributors == 7) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]} & ${contributor[6]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]} & ${contributor[6]}`;
    } else if (currentContributors == 8) { 
-      citation[0] = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]}, ${contributor[6]} & ${contributor[7]}`;
+      allContributors = `${contributor[0]}, ${contributor[1]}, ${contributor[2]}, ${contributor[3]}, ${contributor[4]}, ${contributor[5]}, ${contributor[6]} & ${contributor[7]}`;
    }
+
+   //Validation
+   if (l1 == "") {
+      allContributors = "Error: No Contributor Lastname.";
+      }
 }
 
 
 function citeYearPublished() { 
-   websiteYearPublished = document.querySelector('#websiteYearPublishedInput').value
-   citation[1] = `(${websiteYearPublished})`;
+   websiteYearPublished = document.querySelector('#websiteYearPublishedInput').value;
+}
+
+function citeSourceTitle() { 
+   sourceTitle = document.querySelector('#sourceTitle').value;
 }

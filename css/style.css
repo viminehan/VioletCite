@@ -204,12 +204,22 @@ BIBLIOGRAPHY
 #bibliography li {
   margin-top: 0.5%;
 }
+
+.citationEntry li { 
+  display: inline;
+  list-style: none;
+}
+
+.cSourceTitle { 
+  font-style: italic;
+}
+
 /***********************
 BIBLIOGRAPHY MENU
 ***********************/
 #bibliographyButtons { 
   margin-top: 1.5%;
-}
+}; 
 
 /***************
 FOOTER
