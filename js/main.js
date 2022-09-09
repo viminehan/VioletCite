@@ -8,6 +8,49 @@
  let sourceSelected = "website";
  let currentContributors = 1;
 
+ /General Data Declarations
+let citation = "Citation Error.";
+let sourceTitle = "";
+
+//Contributor Data Declarations
+let contributor = [];
+let allContributors;
+
+let l1 = "";
+let m1 = "";
+let n1 = "";
+
+let l2 = "";
+let m2 = "";
+let n2 = "";
+
+let l3 = "";
+let m3 = "";
+let n3 = "";
+
+let l4 = "";
+let m4 = "";
+let n4 = "";
+
+let l5 = "";
+let m5 = "";
+let n5 = "";
+
+let l6 = "";
+let m6 = "";
+let n6 = "";
+
+let l7 = "";
+let m7 = "";
+let n7 = "";
+
+let l8 = "";
+let m8 = "";
+let n8 = "";
+
+//Website Data Declarations
+let websiteYearPublished = "";
+
  /**********************
  BUTTON EVENT LISTNERS
  ***********************/
@@ -353,50 +396,7 @@ function logWebsiteCitation() {
    document.querySelector('.cTitle').innerHTML = sourceTitle;
 };
 
-//General Data Declarations
-let citation = "Citation Error.";
-let sourceTitle = "";
-
-//Contributor Data Declarations
-let contributor = [];
-let allContributors;
-
-let l1 = "";
-let m1 = "";
-let n1 = "";
-
-let l2 = "";
-let m2 = "";
-let n2 = "";
-
-let l3 = "";
-let m3 = "";
-let n3 = "";
-
-let l4 = "";
-let m4 = "";
-let n4 = "";
-
-let l5 = "";
-let m5 = "";
-let n5 = "";
-
-let l6 = "";
-let m6 = "";
-let n6 = "";
-
-let l7 = "";
-let m7 = "";
-let n7 = "";
-
-let l8 = "";
-let m8 = "";
-let n8 = "";
-
-//Website Data Declarations
-let websiteYearPublished = "";
-
-
+//Provides all contributors in a single string as allContributors
 function citeContributors() { 
    l1 = document.querySelector('#l1').value
    m1 = document.querySelector('#m1').value
