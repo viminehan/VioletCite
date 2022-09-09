@@ -8,7 +8,7 @@
  let sourceSelected = "website";
  let currentContributors = 1;
 
- /General Data Declarations
+ //General Data Declarations
 let citation = "Citation Error.";
 let sourceTitle = "";
 
@@ -358,45 +358,8 @@ function clearC8() {
    document.querySelector('#s8').value = "";
 }
 
-/***************************
- CITATION MENU
- **************************/
-function clearCitation() { 
-   console.log("Clearing Citation....");
-   resetForms();
-   resetCitationBoxes();
-}
-
-function resetCitationBoxes() { 
-   delContributor2();
-   delContributor3();
-   delContributor4();
-   delContributor5();
-   delContributor6();
-   delContributor7();
-   delContributor8();
-   currentContributors = 1;
-   console.log("Current Contributors: " + currentContributors);
-}
-
-//Complete Citation Click
-function completeCitation() { 
-   citeContributors();
-   citeYearPublished();
-   citeSourceTitle();
-   logWebsiteCitation();
-   // clearCitation();
-}
-
-function logWebsiteCitation() {
-   citation = `${allContributors} ${websiteYearPublished ? `(${websiteYearPublished})` : `` } ${sourceTitle}`;
-   // document.querySelector('#testEntry').innerHTML = citation;
-   document.querySelector('.cName').innerHTML = allContributors;
-   document.querySelector('.cDatePublished').innerHTML = "(" + websiteYearPublished + ")";
-   document.querySelector('.cTitle').innerHTML = sourceTitle;
-};
-
-//Provides all contributors in a single string as allContributors
+ //CONTRIBUTOR CITATION THING 
+ //Provides all contributors in a single string as allContributors
 function citeContributors() { 
    l1 = document.querySelector('#l1').value
    m1 = document.querySelector('#m1').value
@@ -494,11 +457,62 @@ function citeContributors() {
       }
 }
 
+/***************************
+ CITATION MENU
+ **************************/
 
-function citeYearPublished() { 
-   websiteYearPublished = document.querySelector('#websiteYearPublishedInput').value;
+function clearCitation() { 
+   console.log("Clearing Citation....");
+   resetForms();
+   resetCitationBoxes();
+}
+
+function resetCitationBoxes() { 
+   delContributor2();
+   delContributor3();
+   delContributor4();
+   delContributor5();
+   delContributor6();
+   delContributor7();
+   delContributor8();
+   currentContributors = 1;
+   console.log("Current Contributors: " + currentContributors);
+}
+
+/***************************
+COMPLETE CITATION
+ **************************/
+//Complete Citation Click
+function completeCitation() { 
+   logWebsiteCitation();
+  //(Uncomment in prod) clearCitation();
+}
+
+function logWebsiteCitation() {
+   citeContributors();
+   citeWebsiteYearPublished();
+   citeSourceTitle();
+   citeWebsiteName();
+
+   //Activate Appropriate Styling
+   document.querySelector('.item3').classList.add('cSourceTitle');
+
+   //Assign Data to Citation Items
+   document.querySelector('.item1').innerHTML = allContributors;
+   document.querySelector('.item2').innerHTML = websiteYearPublished;
+   document.querySelector('.item3').innerHTML = sourceTitle;
+   document.querySelector('.item4').innerHTML = websiteName;
+
+};
+
+function citeWebsiteYearPublished() { 
+   websiteYearPublished = "(" + document.querySelector('#websiteYearPublishedInput').value + ")";
 }
 
 function citeSourceTitle() { 
-   sourceTitle = document.querySelector('#sourceTitle').value;
+   sourceTitle = document.querySelector('#sourceTitle').value + ",";
+}
+
+function citeWebsiteName() { 
+   websiteName = document.querySelector('#websiteNameInput').value + ",";
 }

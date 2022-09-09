@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-flow: column;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 header { 
@@ -205,13 +206,14 @@ BIBLIOGRAPHY
   margin-top: 0.5%;
 }
 
-.citationEntry li { 
+.citationEntry span { 
   display: inline;
-  list-style: none;
+  margin-right: 2px;
 }
 
 .cSourceTitle { 
   font-style: italic;
+  font-weight: 400;
 }
 
 /***********************
@@ -224,9 +226,3 @@ BIBLIOGRAPHY MENU
 /***************
 FOOTER
 **************/
-footer { 
-  margin-top: 2%;
-  color: darkblue;
-  text-decoration: underline;
-  font-size: 0.8rem;
-}
