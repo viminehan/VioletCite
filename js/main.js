@@ -49,7 +49,7 @@ let m8 = "";
 let n8 = "";
 
 //Website Data Declarations
-let websiteYearPublished = "";
+let YearPublished = "";
 
  /**********************
  BUTTON EVENT LISTNERS
@@ -490,7 +490,7 @@ function completeCitation() {
 
 function logWebsiteCitation() {
    citeContributors();
-   citeWebsiteYearPublished();
+   citeYearPublished();
    citeSourceTitle();
    citeWebsiteName();
 
@@ -499,14 +499,14 @@ function logWebsiteCitation() {
 
    //Assign Data to Citation Items
    document.querySelector('.item1').innerHTML = allContributors;
-   document.querySelector('.item2').innerHTML = websiteYearPublished;
+   document.querySelector('.item2').innerHTML = YearPublished;
    document.querySelector('.item3').innerHTML = sourceTitle;
    document.querySelector('.item4').innerHTML = websiteName;
 
 };
 
-function citeWebsiteYearPublished() { 
-   websiteYearPublished = "(" + document.querySelector('#websiteYearPublishedInput').value + ")";
+function citeYearPublished() { 
+   YearPublished = "(" + document.querySelector('#websiteYearPublishedInput').value + ")";
 }
 
 function citeSourceTitle() { 
@@ -515,4 +515,8 @@ function citeSourceTitle() {
 
 function citeWebsiteName() { 
    websiteName = document.querySelector('#websiteNameInput').value + ",";
+}
+
+function citeDateAccessed() { 
+
 }
