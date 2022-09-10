@@ -11,6 +11,8 @@
  //General Data Declarations
 let citation = "Citation Error.";
 let sourceTitle = "";
+let YearPublished = "";
+let dateAccessed = "";
 
 //Contributor Data Declarations
 let contributor = [];
@@ -49,7 +51,7 @@ let m8 = "";
 let n8 = "";
 
 //Website Data Declarations
-let YearPublished = "";
+
 
  /**********************
  BUTTON EVENT LISTNERS
@@ -502,6 +504,7 @@ function logWebsiteCitation() {
    document.querySelector('.item2').innerHTML = YearPublished;
    document.querySelector('.item3').innerHTML = sourceTitle;
    document.querySelector('.item4').innerHTML = websiteName;
+   console.log(dateAccessed);
 
 };
 
@@ -518,5 +521,5 @@ function citeWebsiteName() {
 }
 
 function citeDateAccessed() { 
-
+   dateAccessed = document.querySelector('#websiteDateAccessedInput').value;
 }
